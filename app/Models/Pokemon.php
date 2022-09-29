@@ -9,5 +9,5 @@ class Pokemon extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $guarded = ['nombre', 'tipo1', 'tipo2', 'grupo_huevo', 'numero', 'img'];
+    protected $fillable = ['nombre', 'tipo1', 'tipo2', 'grupo_huevo', 'numero', 'img'];
 }

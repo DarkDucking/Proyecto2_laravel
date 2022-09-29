@@ -35,7 +35,7 @@
             <i>{{ $message }}</i>
         @enderror
     <br>
-    <label for="img">Nombre <input type="text" name="img" id="img" value="{{ old('img') }}"></label>
+    <label for="img">URL de la imagen <input type="text" name="img" id="img" value="{{ old('img') }}"></label>
         @error('img')
             <i>{{ $message }}</i>
         @enderror

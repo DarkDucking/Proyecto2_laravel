@@ -37,6 +37,20 @@ class PokemonController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'nombre' => 'required',
+            'tipo1' => 'required',
+            'tipo2' => 'required',
+            'grupo_huevo' => 'required',
+            'numero' => 'required',
+            'img' => 'required',
+        ]);
+        
+        echo 'jala';
+
+        Pokemon::create($request->all());
+
+        return view('pokemon_create');
     }
 
     /**
