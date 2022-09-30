@@ -15,6 +15,8 @@ class PokemonController extends Controller
     public function index()
     {
         //
+        $pokemons = Pokemon::all();
+        return view('pokemon.pokemon_index', compact('pokemons'));
     }
 
     /**
@@ -25,7 +27,7 @@ class PokemonController extends Controller
     public function create()
     {
         //
-        return view('pokemon_create');
+        return view('pokemon.pokemon_create');
     }
 
     /**
@@ -50,7 +52,7 @@ class PokemonController extends Controller
 
         Pokemon::create($request->all());
 
-        return view('pokemon_create');
+        return view('pokemon.pokemon_index');
     }
 
     /**
@@ -62,6 +64,7 @@ class PokemonController extends Controller
     public function show(Pokemon $pokemon)
     {
         //
+        return view('pokemon.pokemon_show', compact('pokemon'));
     }
 
     /**

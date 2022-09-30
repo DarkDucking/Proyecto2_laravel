@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Registra un nuevo pokemon</h1>
+    <a href="/pokemon">Ver Pokemons atrapados</a>
     <form action="/pokemon" method="POST">
     @csrf
     <label for="nombre">Nombre <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}"></label>
