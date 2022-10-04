@@ -16,16 +16,53 @@
             <i>{{ $message }}</i>
         @enderror
     <br>
-    <label for="tipo1">Tipo primario <input type="text" name="tipo1" id="tipo1" value="{{ old('tipo1') }}"></label>
-        @error('tipo1')
-            <i>{{ $message }}</i>
-        @enderror
+    <label for="tipo1">Tipo Primario</label>
+        <select name="tipo1" id="tipo1">
+            <option value="Bicho">Bicho</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Electrico">Electrico</option>
+            <option value="Hada">Hada</option>
+            <option value="Lucha">Lucha</option>
+            <option value="Fuego">Fuego</option>
+            <option value="Volador">Volador</option>
+            <option value="Fantasma">Fantasma</option>
+            <option value="Planta">Planta</option>
+            <option value="Normal">Normal</option>
+            <option value="Tierra">Tierra</option>
+            <option value="Hielo">Hielo</option>
+            <option value="Roca">Roca</option>
+            <option value="Acero">Acero</option>
+            <option value="Agua">Agua</option>
+            <option value="Psiquico">Psiquico</option>
+            <option value="Siniestro">Siniestro</option>
+            <option value="Veneno">Veneno</option>
+        </select>
     <br>
-    <label for="tipo2">Tipo secundario <input type="text" name="tipo2" id="tipo2" value="{{ old('tipo2') }}"></label>
-        @error('tipo2')
-            <i>{{ $message }}</i>
-        @enderror
+    
+    <label for="tipo2">Tipo Secundario</label>
+        <select name="tipo2" id="tipo2">
+            <option value="Bicho">Bicho</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Electrico">Electrico</option>
+            <option value="Hada">Hada</option>
+            <option value="Lucha">Lucha</option>
+            <option value="Fuego">Fuego</option>
+            <option value="Volador">Volador</option>
+            <option value="Fantasma">Fantasma</option>
+            <option value="Planta">Planta</option>
+            <option value="Normal">Normal</option>
+            <option value="Tierra">Tierra</option>
+            <option value="Hielo">Hielo</option>
+            <option value="Roca">Roca</option>
+            <option value="Acero">Acero</option>
+            <option value="Agua">Agua</option>
+            <option value="Psiquico">Psiquico</option>
+            <option value="Siniestro">Siniestro</option>
+            <option value="Veneno">Veneno</option>
+            <option value="--------------">Sin Tipo</option>
+        </select>
     <br>
+
     <label for="grupo_huevo">Grupo huevo <input type="text" name="grupo_huevo" id="grupo_huevo" value="{{ old('grupo_huevo') }}"></label>
         @error('grupo_huevo')
             <i>{{ $message }}</i>

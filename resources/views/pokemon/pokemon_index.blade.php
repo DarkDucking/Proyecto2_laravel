@@ -18,6 +18,8 @@
             <th>Tipo primario</th>
             <th>Tipo secundario</th>
             <th>Ver Detalles</th>
+            <th>Editar Datos</th>
+            <th>Eliminar</th>
         </tr>
         @foreach ($pokemons as $pokemon)
         <tr>
@@ -29,6 +31,20 @@
             <td>
                 <a href="/pokemon/{{ $pokemon->id }}">
                 Ver detalles 
+                </a>
+            </td>
+            <td>
+                <a href="/pokemon/{{ $pokemon->id }}/edit">
+                Editar Datos 
+                </a>
+            </td>
+            <td>
+                <a href="">
+                <form action="/pokemon/{{ $pokemon->id }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="🗑️">
+                </form>
                 </a>
             </td>
         

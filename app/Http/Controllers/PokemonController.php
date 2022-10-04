@@ -52,7 +52,7 @@ class PokemonController extends Controller
 
         Pokemon::create($request->all());
 
-        return view('pokemon.pokemon_index');
+        return redirect('/pokemon');
     }
 
     /**
@@ -75,7 +75,7 @@ class PokemonController extends Controller
      */
     public function edit(Pokemon $pokemon)
     {
-        //
+        return view('pokemon.pokemon_edit', compact('pokemon'));
     }
 
     /**
@@ -87,7 +87,14 @@ class PokemonController extends Controller
      */
     public function update(Request $request, Pokemon $pokemon)
     {
-        //
+        $pokemon->nombre = $request->nombre;
+        $pokemon->tipo1 = $request->tipo1;
+        $pokemon->tipo2 = $request->tipo2;
+        $pokemon->grupo_huevo = $request->grupo_huevo;
+        $pokemon->numero = $request->numero;
+        $pokemon->img = $request->img;
+        $pokemon->save();
+        return redirect('/pokemon');
     }
 
     /**
@@ -98,6 +105,7 @@ class PokemonController extends Controller
      */
     public function destroy(Pokemon $pokemon)
     {
-        //
+        $pokemon->destroy($pokemon->id);
+        return redirect('/pokemon');
     }
 }

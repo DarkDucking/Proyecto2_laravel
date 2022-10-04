@@ -7,6 +7,13 @@
     <title>Show Pokemon</title>
 </head>
 <body>
+    <a href="/pokemon">
+        Regresar a la lista de pokemons
+    </a>
+    <br>
+    <a href="/pokemon/{{ $pokemon->id }}/edit">
+        Editar Datos 
+    </a>
     <h1>Datos de {{ $pokemon->nombre }}</h1>
     <h2>Numero en la pokedex: {{ $pokemon->numero }} </h2>
     <h2>Tipo primario {{ $pokemon->tipo1 }} </h2>
